@@ -1,0 +1,77 @@
+@import "../../../../styles/var.common.scss";
+
+.todo {
+  transform: translateX(-50px);
+  opacity: 0;
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+    padding-inline: 15px;
+
+    @media screen and (min-width: 768px) {
+      gap: 20px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__custom-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px $greyE1;
+
+    @media screen and (min-width: 768px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 20%;
+      border-bottom: 2px solid $green;
+      border-left: 2px solid $green;
+      transform: rotate(-50deg) skewX(-10deg);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__label-name {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: $black;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 400;
+      font-size: 2.8rem;
+      line-height: 3.1rem;
+    }
+  }
+
+  &__checkbox:checked + &__custom-checkbox::after {
+    opacity: 1;
+  }
+
+  &__checkbox:checked + * + &__label-name {
+    text-decoration: line-through;
+    color: $greyD3;
+  }
+}

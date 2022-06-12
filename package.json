@@ -1,0 +1,56 @@
+{
+  "name": "mindbox-test",
+  "version": "1.0.0",
+  "description": "1. Для запуска данного проекта вам понадобится nodejs и npm.  \r 2. Склонируйте данный репозиторий к себе на диск. Затем выполните `npm start` для запуска приложения.  \r 3. По умолчанию сервер слушает на 3001-ом порту localhost, приложение открывается на 3000-ом порту.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm i\" \"webpack-dev-server --config ./webpack/webpack.dev.config.js\" \"json-server -w ./src/server/db.json -p 3001\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callivan/MINDBOX-TEST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/callivan/MINDBOX-TEST/issues"
+  },
+  "homepage": "https://github.com/callivan/MINDBOX-TEST#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-typescript": "^7.18.4",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@reduxjs/toolkit": "^1.8.2",
+    "@types/gsap": "^3.0.0",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.2.1",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "json-server": "^0.17.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss-loader": "^7.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
+    "react-refresh": "^0.13.0",
+    "redux": "^4.2.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4"
+  }
+}

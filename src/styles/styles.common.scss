@@ -1,0 +1,39 @@
+@import "./var.common.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  font-family: "Open Sans";
+  background-color: $greyF5;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 768px;
+  padding-inline: 10px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
